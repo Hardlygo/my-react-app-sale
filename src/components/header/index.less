@@ -1,0 +1,59 @@
+@import (reference) "../../style/mixins.less";
+@import "../../assets/iconfonts/iconfont.css";
+.header-container {
+  background-color: @base-color;
+  .flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  .wh(100%, 1.173333rem);
+  .header-slide-icon {
+    .font(0.48rem,#fff);
+    .positionLeft;
+  }
+  .header-title {
+    .font(0.533333rem,#fff);
+  }
+  .header-link {
+    .font(0.533333rem,#fff);
+    .positionRight(absolute,0.533333rem);
+  }
+  .header-link-confim {
+    font-size: 32px;
+  }
+  .nav-slide-list {
+    .modal-wrraper(fixed);
+    top: 1.173333rem;
+    display: flex;
+    flex-direction: column;
+    .nav-link {
+      .font( 0.426667rem);
+      border-bottom: 1px solid #ddd;
+      margin: 0 0.4rem;
+      padding: 0.466667rem 0.266667rem;
+      position: relative;
+      &:before {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        color: #666;
+      }
+    }
+  }
+}
+.nav-enter {
+  transform: translate3d(-100%, 0, 0);
+}
+.nav-enter.nav-enter-active {
+  transform: translate3d(0, 0, 0);
+  transition: transform 300ms;
+}
+.nav-exit {
+  transform: translate3d(0, 0, 0);
+}
+.nav-exit.nav-exit-active {
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 300ms;
+}

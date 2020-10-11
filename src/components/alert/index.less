@@ -1,0 +1,41 @@
+@import (reference) "../../style/mixins.less";
+.alert {
+  .modal-wrraper(fixed,rgba(0,0,0,0.3));
+  z-index: 11;
+  .alert-wrraper {
+    .positionCenter;
+    .wh(8rem,4.8rem);
+    z-index: 12;
+    background-color: #fff;
+    border-radius: 0.213333rem;
+    .flex(@align-items: stretch);
+    flex-direction: column;
+    .alert-content {
+      flex: 5;
+      .flex;
+      .font(0.533333rem);
+    }
+    .confirm-btn {
+      flex: 2;
+      .flex;
+      .font(0.533333rem);
+      border-top: 1px solid #eee;
+    }
+  }
+}
+//动画
+.alert-enter {
+  opacity: 0;
+}
+.alert-enter.alert-enter-active {
+  transition: all 300ms;
+  opacity: 1;
+}
+.alert-exit {
+  opacity: 1;
+}
+
+.alert-exit.alert-exit-active {
+  transition: all 300ms;
+  opacity: 0;
+}
