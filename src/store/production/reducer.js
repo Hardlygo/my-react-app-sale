@@ -14,7 +14,7 @@ let defaultState = {
    *    selectNum: 0, 选择数量
    * }]
    */
-  dataList: []
+  dataList: [],
 };
 
 export const proData = (state = defaultState, action) => {
@@ -24,11 +24,12 @@ export const proData = (state = defaultState, action) => {
   switch (type) {
     case pro.GETPRODUCTION:
       //不修改原数据
-      immuteDataList = immutable.list(action.dataList);
+      immuteDataList = immutable.fromJS(action.dataList);
       // redux必须返回一个新的state
+
       return { ...state, ...{ dataList: immuteDataList.toJS() } };
     case pro.TOGGLESELECT:
-      immuteDataList = immutable.list(state.dataList);
+      immuteDataList = immutable.fromJS(state.dataList);
       immuteItem = immutable.Map(state.dataList[action.index]);
       immuteItem = immuteItem.set(
         "selectStatus",
@@ -37,7 +38,7 @@ export const proData = (state = defaultState, action) => {
       immuteDataList = immuteDataList.set(action.index, immuteItem);
       return { ...state, ...{ dataList: immuteDataList.toJS() } };
     case pro.EDITPRODUCTION:
-      immuteDataList = immutable.list(state.dataList);
+      immuteDataList = immutable.fromJS(state.dataList);
       immuteItem = immutable.Map(state.dataList[action.index]);
       immuteItem = immuteItem.set("selectNum", action.selectNum);
       immuteDataList = immuteDataList.set(action.index, immuteItem);
@@ -58,5 +59,3 @@ export const proData = (state = defaultState, action) => {
       return state;
   }
 };
-
-

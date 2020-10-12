@@ -17,7 +17,10 @@ import TouchableOpacity from "../../components/TouchableOpacity";
 import withPadStr from "../../components/hoc/withPadStr";
 
 import "./index.less";
-
+/**
+ * @problem 认识到每次切换路由都会重现渲染组件，而不是走update流程
+ * 不在state内的属性，当重新赋值时不会触发重新渲染
+ */
 class Home extends Component {
   static propTypes = {};
   constructor(props) {
@@ -25,26 +28,32 @@ class Home extends Component {
     this.state = {
       alertStatus: false,
       alertTips: "",
+      selectedProList:[]
     };
-    //由props计算出来，不算state
-    this.selectedProList = [];
+    //由props计算出来，不算state(不放入state不行)
+    // this.selectedProList = [];
     this.innitData = this.innitData.bind(this);
     this.submitForm = this.submitForm.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.upLoadImg = this.upLoadImg.bind(this);
   }
   shouldComponentUpdate(nextProps, nextState) {
+    
     return (
       !is(fromJS(this.props), fromJS(nextProps)) ||
       !is(fromJS(this.state), fromJS(nextState))
     );
   }
   componentDidMount() {
-    console.log(this.props);
+    
     this.innitData(this.props);
+  }
+  componentWillUnmount(){
+    
   }
   //不再使用receiveProps生命周期函数
   componentDidUpdate(prevProps) {
+    // 
     if (!is(fromJS(this.props.proData), fromJS(prevProps.proData))) {
       this.initData(this.props);
     }
@@ -89,11 +98,11 @@ class Home extends Component {
         <div>
           <p className="common-title">请选择销售的产品</p>
           <Link to="/production" className="common-select-btn">
-            {this.selectedProList.length ? (
+            {this.state.selectedProList.length>0 ? (
               <ul className="select-pro-list">
-                {this.selectedProList.map((item, index) => {
+                {this.state.selectedProList.map((item, index) => {
                   return (
-                    <li key={index} className="select-pro-item ellipsis">
+                    <li key={item.product_id} className="select-pro-item ellipsis">
                       {item.product_name}x{item.selectNum}
                     </li>
                   );
@@ -108,7 +117,7 @@ class Home extends Component {
           <p className="common-title">请上传发票凭证</p>
           <div className="file-lable">
             <span className="common-select-btn">上传图片</span>
-            <input type="file" onChange={this.upLoadImg} />
+            <input type="file" onChange={this.upLoadImg} accept="image/*"/>
           </div>
           <img className="select-img" src={this.props.formData.imgPath} />
         </div>
@@ -131,9 +140,12 @@ class Home extends Component {
     );
   }
   innitData(props) {
-    this.selectedProList = (props.proData.dataList || []).filter((item) => {
+    let selectedProList = (props.proData.dataList || []).filter((item) => {
       return item.selectStatus && item.selectNum;
     });
+    this.setState({
+      selectedProList
+    })
   }
   closeAlert() {
     this.setState({

@@ -22,7 +22,7 @@ class API extends Server {
           msg: "上传图片失败",
           response: result,
           params,
-          url: "//elm.cangdu.org/v1/addimg/shop"
+          url: "//elm.cangdu.org/v1/addimg/shop",
         };
         throw e;
       }
@@ -56,7 +56,7 @@ class API extends Server {
           msg: "获取记录数据失败",
           response: result,
           params,
-          url: API.baseURL + `/shopro/data/record/${params.type}`
+          url: API.baseURL + `/shopro/data/record/${params.type}`,
         };
         throw e;
       }
@@ -74,19 +74,14 @@ class API extends Server {
   async getProduction(params = {}) {
     try {
       const result = await this.http("get", "/shopro/data/products", params);
-      if (
-        result &&
-        result.data instanceof Object &&
-        result.https_code === 200
-      ) {
-        console.log(result.data.data);
+      if (result && result.http_code === 200) {
         return result.data.data || [];
       } else {
         const e = {
           msg: "获取商品数据异常",
           response: result,
           params,
-          url: API.baseURL + "/shopro/data/products"
+          url: API.baseURL + "/shopro/data/products",
         };
         throw e;
       }
@@ -116,7 +111,7 @@ class API extends Server {
           msg: "获取佣金数据失败",
           response: result,
           params,
-          url: API.baseURL + "/shopro/data/balance"
+          url: API.baseURL + "/shopro/data/balance",
         };
         throw e;
       }

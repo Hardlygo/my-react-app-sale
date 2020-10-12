@@ -26,7 +26,6 @@ export class Production extends Component {
   }
   //重现渲染条件
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState);
     return (
       !is(fromJS(this.props), fromJS(nextProps)) ||
       !is(fromJS(this.state), fromJS(nextState))
@@ -43,7 +42,7 @@ export class Production extends Component {
                 <li key={index} className="pro-item">
                   <div
                     className="pro-item-select"
-                    onClick={this.selectPro.bind(this, index)}
+                    onClick={()=>{this.props.selectPro(index)}}
                   >
                     <span
                       className={`icon-xuanze1 pro-select-status ${
@@ -57,6 +56,7 @@ export class Production extends Component {
                       className={`icon-jian ${
                         item.selectNum > 0 ? "edit-active" : ""
                       }`}
+                      onClick={this.handleEdit.bind(this, index, -1)}
                     ></span>
                     <span className="pro-num">{item.selectNum}</span>
                     <span
