@@ -17,7 +17,7 @@ let defaultState = {
   dataList: []
 };
 
-const proData = (state = defaultState, action) => {
+export const proData = (state = defaultState, action) => {
   let immuteDataList;
   let immuteItem;
   const type = action.type;
@@ -59,4 +59,4 @@ const proData = (state = defaultState, action) => {
   }
 };
 
-export default proData;
+

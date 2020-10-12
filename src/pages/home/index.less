@@ -7,5 +7,64 @@
   }
   .home-form {
     background-color: #fff;
+    .home-form-item{
+      height: 1.573333rem;
+      border-bottom: 1px solid #eee;
+      span{
+        .font(0.426667rem,#555);
+        margin-left: .4rem;
+        margin-right: .26667rem;
+      }
+      input{
+        border: none;
+        font-size: .4rem;
+      }
+      ::-webkit-input-placeholder{
+        color: #ccc;
+      }
+    }
+  }
+  .common-select-btn{
+    background-color: #fff;
+    display: block;
+    min-height: 1.6rem;
+    .font(.56rem,#ccc,center);
+    .flex;
+    .select-pro-list{
+      .flex();
+      flex-wrap: wrap;
+      .select-pro-item{
+        width: 4.5333rem;
+        margin: .13333rem;
+        line-height: .66667rem;
+        .font(0.426667rem, @text-align:center);
+      }
+    }
+  }
+  .upload-img-con{
+    text-align: center;
+    .file-lable{
+      position: relative;
+      input[type='file']{
+        position: absolute;
+        .wh(100%,100%);
+        background-color: red;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+    }
+    .select-img{
+      margin-top: .13333rem;
+      max-width: 100%;
+    }
+  }
+  .submit-btn{
+    width: 90%;
+    background-color: @base-color;
+    margin: .666667rem auto;
+    border-radius: .13333rem;
+    line-height: 1.33333rem;
+    .font(.53333rem,#fff,center)
   }
 }

@@ -1,5 +1,5 @@
 import axios from "axios";
-import envconfig from "@/envconfig";
+import envconfig from "../envconfig";
 
 /**
  * 主要params参数
