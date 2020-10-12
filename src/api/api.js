@@ -71,7 +71,7 @@ class API extends Server {
    * @method get
    * @return {promise}
    */
-  async getProducttion(params = {}) {
+  async getProduction(params = {}) {
     try {
       const result = await this.http("get", "/shopro/data/products", params);
       if (
@@ -79,6 +79,7 @@ class API extends Server {
         result.data instanceof Object &&
         result.https_code === 200
       ) {
+        console.log(result.data.data);
         return result.data.data || [];
       } else {
         const e = {

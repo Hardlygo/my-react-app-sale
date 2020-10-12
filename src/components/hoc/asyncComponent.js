@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 
+/**
+ *  异步引入组件
+ * @param {func} importComponent 
+ */
 export default function asyncComponent(importComponent) {
   class AsyncComponent extends Component {
     constructor(props) {

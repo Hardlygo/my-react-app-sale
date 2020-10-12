@@ -14,7 +14,9 @@ const receiveData = (list) => ({
 export const getProData = () => {
   return async (dispatch) => {
     try {
-      let result = await API.getProducttion();
+      console.log(66);
+      let result = await API.getProduction();
+      console.log(result)
       result.map((item) => ({
         ...item,
         selectStatus: false,

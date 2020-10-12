@@ -4,6 +4,7 @@ import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import asyncComponent from "../components/hoc/asyncComponent";
 
 import Home from "../pages/home";
+const Production =asyncComponent(()=>import("../pages/production"))
 
 export default class Router extends Component {
   render() {
@@ -16,6 +17,11 @@ export default class Router extends Component {
             render={(routeProps) => <Home {...routeProps} />}
           ></Route>
           <Redirect from="/home" to="/"></Redirect>
+          <Route
+          path="/production"
+          exact
+          render={(routeProps) => <Production {...routeProps} />}
+        ></Route>
         </Switch>
       </HashRouter>
     );
