@@ -45,14 +45,17 @@ export const proData = (state = defaultState, action) => {
       return { ...state, ...{ dataList: immuteDataList.toJS() } };
     case pro.CLEARSELECTED:
       //对面上面的list方法
+
       immuteDataList = immutable.fromJS(state.dataList);
       for (let i = 0; i < state.dataList.length; i++) {
-        immuteDataList.update(i, (item) => {
+        //返回一个新数组
+        immuteDataList = immuteDataList.update(i, (item) => {
           item = item.set("selectNum", 0);
           item = item.set("selectStatus", false);
           return item;
         });
       }
+
       return { ...state, ...{ dataList: immuteDataList.toJS() } };
 
     default:

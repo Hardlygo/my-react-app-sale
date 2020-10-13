@@ -28,7 +28,7 @@ class Home extends Component {
     this.state = {
       alertStatus: false,
       alertTips: "",
-      selectedProList:[]
+      selectedProList: [],
     };
     //由props计算出来，不算state(不放入state不行)
     // this.selectedProList = [];
@@ -38,24 +38,20 @@ class Home extends Component {
     this.upLoadImg = this.upLoadImg.bind(this);
   }
   shouldComponentUpdate(nextProps, nextState) {
-    
     return (
       !is(fromJS(this.props), fromJS(nextProps)) ||
       !is(fromJS(this.state), fromJS(nextState))
     );
   }
   componentDidMount() {
-    
     this.innitData(this.props);
   }
-  componentWillUnmount(){
-    
-  }
+  componentWillUnmount() {}
   //不再使用receiveProps生命周期函数
   componentDidUpdate(prevProps) {
-    // 
+    //
     if (!is(fromJS(this.props.proData), fromJS(prevProps.proData))) {
-      this.initData(this.props);
+      this.innitData(this.props);
     }
   }
   render() {
@@ -98,11 +94,11 @@ class Home extends Component {
         <div>
           <p className="common-title">请选择销售的产品</p>
           <Link to="/production" className="common-select-btn">
-            {this.state.selectedProList.length>0 ? (
+            {this.state.selectedProList.length > 0 ? (
               <ul className="select-pro-list">
                 {this.state.selectedProList.map((item, index) => {
                   return (
-                    <li key={item.product_id} className="select-pro-item ellipsis">
+                    <li key={index} className="select-pro-item ellipsis">
                       {item.product_name}x{item.selectNum}
                     </li>
                   );
@@ -117,9 +113,9 @@ class Home extends Component {
           <p className="common-title">请上传发票凭证</p>
           <div className="file-lable">
             <span className="common-select-btn">上传图片</span>
-            <input type="file" onChange={this.upLoadImg} accept="image/*"/>
+            <input type="file" onChange={this.upLoadImg} accept="image/*" />
           </div>
-          <img className="select-img" src={this.props.formData.imgPath} />
+          <img className="select-img" src={this.props.formData.imgPath} alt="" />
         </div>
         <TouchableOpacity
           className="submit-btn"
@@ -144,8 +140,8 @@ class Home extends Component {
       return item.selectStatus && item.selectNum;
     });
     this.setState({
-      selectedProList
-    })
+      selectedProList,
+    });
   }
   closeAlert() {
     this.setState({

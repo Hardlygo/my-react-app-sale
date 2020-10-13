@@ -1,0 +1,43 @@
+@import (reference) "../../style/mixins.less";
+
+.balance-container {
+  padding-top: 1.173333rem;
+  .balance-content {
+    padding-top: 0.4rem;
+    &-title {
+      .font(0.426667rem,#999);
+      padding: 0 0.4rem;
+    }
+    &-form {
+      background-color: #fff;
+      margin-top: 0.4rem;
+      min-height: 3.33333rem;
+      .flex;
+      flex-direction: column;
+      p:first-of-type {
+        .font(0.53333rem,#333);
+      }
+      p:nth-of-type(2) {
+        .font(0.53333rem,#333);
+        margin-top: 0.4rem;
+        input{
+            display: inline-block;
+            .font(.533333rem,#333);
+            border: none;
+            width: 2.4rem;
+        }
+        ::-webkit-input-placeholder {
+          color: #ccc;
+        }
+      }
+    }
+  }
+  .submit-btn{
+    width: 90%;
+    background-color: @base-color;
+    margin: .666667rem auto;
+    border-radius: .13333rem;
+    line-height: 1.33333rem;
+    .font(.53333rem,#fff,center)
+  }
+}

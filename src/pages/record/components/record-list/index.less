@@ -1,0 +1,32 @@
+@import (reference) "../../../../style/mixins.less";
+
+.record-list-con {
+  .record-list-item {
+    background-color: #fff;
+    margin-top: 10.000013px;
+    .item-header {
+      .flex(@justify-conyent:space-between);
+      height: 1.333333rem;
+      padding: 0 0.266667rem;
+      border-bottom: 1px solid #eee;
+      span:nth-of-type(1) {
+        .font(0.4rem, #999);
+      }
+      span:nth-of-type(2) {
+        .font(0.48rem, @base-red);
+      }
+    }
+    .item-content {
+      padding: 0.266667rem;
+      p {
+        .font(0.4rem, #000);
+        line-height: 0.666667rem;
+      }
+    }
+    .item-footer {
+      padding: 0.266667rem;
+      .font(0.373333rem, #000);
+      border-top: 1px solid #eee;
+    }
+  }
+}

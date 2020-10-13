@@ -1,0 +1,38 @@
+@import (reference) "../../style/mixins.less";
+.record-container {
+  padding-top: 1.173333rem;
+  .record-nav-con {
+    position: relative;
+    height: 1.466667rem;
+    .record-nav {
+      height: 100%;
+      .flex;
+      background-color: #fff;
+      .nav-link {
+        .font(@font-size:0.48rem,@text-align:center);
+        flex: 1;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        transition: color 0.3s;
+      }
+      //第一和第二个子元素设置右边线
+      a:nth-of-type(1),
+      a:nth-of-type(2) {
+        border-right: 1px solid #ddd;
+      }
+      .active {
+        color: @base-color;
+      }
+    }
+    .nav-flag-bar {
+      position: absolute;
+      bottom: 0;
+      background-color: @base-color;
+      .wh(1.73333rem,2px);
+      border-radius: 1px;
+      margin-left: -.866667rem;
+      left: 17%;
+      transition: left 300ms;
+    }
+  }
+}

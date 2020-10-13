@@ -65,7 +65,7 @@ export default class Header extends Component {
               exact
               className="nav-link icon-jiantou-copy-copy"
             >
-              帮助中心
+              关于
             </NavLink>
           </aside>
         </CSSTransition>

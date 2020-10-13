@@ -48,7 +48,7 @@ class API extends Server {
       if (
         result &&
         result.data instanceof Object &&
-        result.https_code === 200
+        result.http_code === 200
       ) {
         return result.data;
       } else {
@@ -103,7 +103,7 @@ class API extends Server {
       if (
         result &&
         result.data instanceof Object &&
-        result.https_code === 200
+        result.http_code === 200
       ) {
         return result.data.data || {};
       } else {
