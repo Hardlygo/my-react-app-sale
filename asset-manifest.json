@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/my-react-app-sale/static/css/main.9ae43e9b.chunk.css",
+    "main.js": "/my-react-app-sale/static/js/main.c1172cdb.chunk.js",
+    "main.js.map": "/my-react-app-sale/static/js/main.c1172cdb.chunk.js.map",
+    "runtime-main.js": "/my-react-app-sale/static/js/runtime-main.2ae441c0.js",
+    "runtime-main.js.map": "/my-react-app-sale/static/js/runtime-main.2ae441c0.js.map",
+    "static/js/2.298a7820.chunk.js": "/my-react-app-sale/static/js/2.298a7820.chunk.js",
+    "static/js/2.298a7820.chunk.js.map": "/my-react-app-sale/static/js/2.298a7820.chunk.js.map",
+    "static/css/3.03571c8d.chunk.css": "/my-react-app-sale/static/css/3.03571c8d.chunk.css",
+    "static/js/3.d364034b.chunk.js": "/my-react-app-sale/static/js/3.d364034b.chunk.js",
+    "static/js/3.d364034b.chunk.js.map": "/my-react-app-sale/static/js/3.d364034b.chunk.js.map",
+    "static/css/4.416a6096.chunk.css": "/my-react-app-sale/static/css/4.416a6096.chunk.css",
+    "static/js/4.5a88d144.chunk.js": "/my-react-app-sale/static/js/4.5a88d144.chunk.js",
+    "static/js/4.5a88d144.chunk.js.map": "/my-react-app-sale/static/js/4.5a88d144.chunk.js.map",
+    "static/css/5.57b66b2d.chunk.css": "/my-react-app-sale/static/css/5.57b66b2d.chunk.css",
+    "static/js/5.e3ebb765.chunk.js": "/my-react-app-sale/static/js/5.e3ebb765.chunk.js",
+    "static/js/5.e3ebb765.chunk.js.map": "/my-react-app-sale/static/js/5.e3ebb765.chunk.js.map",
+    "static/css/6.2f797fc2.chunk.css": "/my-react-app-sale/static/css/6.2f797fc2.chunk.css",
+    "static/js/6.ebceab90.chunk.js": "/my-react-app-sale/static/js/6.ebceab90.chunk.js",
+    "static/js/6.ebceab90.chunk.js.map": "/my-react-app-sale/static/js/6.ebceab90.chunk.js.map",
+    "index.html": "/my-react-app-sale/index.html",
+    "precache-manifest.9dfe7282d18670f8c8586e8754ac605c.js": "/my-react-app-sale/precache-manifest.9dfe7282d18670f8c8586e8754ac605c.js",
+    "service-worker.js": "/my-react-app-sale/service-worker.js",
+    "static/css/3.03571c8d.chunk.css.map": "/my-react-app-sale/static/css/3.03571c8d.chunk.css.map",
+    "static/css/4.416a6096.chunk.css.map": "/my-react-app-sale/static/css/4.416a6096.chunk.css.map",
+    "static/css/5.57b66b2d.chunk.css.map": "/my-react-app-sale/static/css/5.57b66b2d.chunk.css.map",
+    "static/css/6.2f797fc2.chunk.css.map": "/my-react-app-sale/static/css/6.2f797fc2.chunk.css.map",
+    "static/css/main.9ae43e9b.chunk.css.map": "/my-react-app-sale/static/css/main.9ae43e9b.chunk.css.map",
+    "static/js/2.298a7820.chunk.js.LICENSE.txt": "/my-react-app-sale/static/js/2.298a7820.chunk.js.LICENSE.txt",
+    "static/media/index.less": "/my-react-app-sale/static/media/iconfont.8b428052.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2ae441c0.js",
+    "static/js/2.298a7820.chunk.js",
+    "static/css/main.9ae43e9b.chunk.css",
+    "static/js/main.c1172cdb.chunk.js"
+  ]
+}
