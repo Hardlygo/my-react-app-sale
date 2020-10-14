@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0453e03589c3252e5a2be50ae339138f",
+    "revision": "53f6609b970efb89669cccc04d342eb5",
     "url": "/my-react-app-sale/index.html"
   },
   {
-    "revision": "0826232a688ee9229d30",
+    "revision": "992c625c552c6b5377bc",
     "url": "/my-react-app-sale/static/css/3.03571c8d.chunk.css"
   },
   {
@@ -16,24 +16,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/my-react-app-sale/static/css/5.57b66b2d.chunk.css"
   },
   {
-    "revision": "2a3fc0483c61be694f59",
-    "url": "/my-react-app-sale/static/css/6.2f797fc2.chunk.css"
+    "revision": "01997a79834e35604590",
+    "url": "/my-react-app-sale/static/css/6.0aa05150.chunk.css"
   },
   {
-    "revision": "99957fa76d71145e33ee",
+    "revision": "b854c5f2ddfd7709433b",
     "url": "/my-react-app-sale/static/css/main.9ae43e9b.chunk.css"
   },
   {
-    "revision": "88008d3df5b20455b91f",
-    "url": "/my-react-app-sale/static/js/2.298a7820.chunk.js"
+    "revision": "0a3c3009a54742e31ff4",
+    "url": "/my-react-app-sale/static/js/2.744ad1e9.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/my-react-app-sale/static/js/2.298a7820.chunk.js.LICENSE.txt"
+    "url": "/my-react-app-sale/static/js/2.744ad1e9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0826232a688ee9229d30",
-    "url": "/my-react-app-sale/static/js/3.d364034b.chunk.js"
+    "revision": "992c625c552c6b5377bc",
+    "url": "/my-react-app-sale/static/js/3.426989cb.chunk.js"
   },
   {
     "revision": "aa1f123d365f59f336d3",
@@ -44,16 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/my-react-app-sale/static/js/5.e3ebb765.chunk.js"
   },
   {
-    "revision": "2a3fc0483c61be694f59",
-    "url": "/my-react-app-sale/static/js/6.ebceab90.chunk.js"
+    "revision": "01997a79834e35604590",
+    "url": "/my-react-app-sale/static/js/6.d889dd56.chunk.js"
   },
   {
-    "revision": "99957fa76d71145e33ee",
-    "url": "/my-react-app-sale/static/js/main.c1172cdb.chunk.js"
+    "revision": "b854c5f2ddfd7709433b",
+    "url": "/my-react-app-sale/static/js/main.6097a54e.chunk.js"
   },
   {
-    "revision": "92ca8b68292cc2d830f7",
-    "url": "/my-react-app-sale/static/js/runtime-main.2ae441c0.js"
+    "revision": "0a2325f1cda6f3a9f076",
+    "url": "/my-react-app-sale/static/js/runtime-main.f62bfd49.js"
   },
   {
     "revision": "0f98adacb38829a9c80f957fcdaf00ab",
