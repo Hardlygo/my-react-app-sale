@@ -36,38 +36,44 @@ export class Production extends Component {
       <main className="pro-container">
         <Header headerTitle="选择产品" confirm />
         <section className="pro-list-con">
-          <ul className="pro-list-ul">
-            {this.props.proData.dataList.map((item, index) => {
-              return (
-                <li key={index} className="pro-item">
-                  <div
-                    className="pro-item-select"
-                    onClick={()=>{this.props.selectPro(index)}}
-                  >
-                    <span
-                      className={`icon-xuanze1 pro-select-status ${
-                        item.selectStatus ? "pro-selected" : ""
-                      }`}
-                    ></span>
-                    <span className="pro-name">{item.product_name}</span>
-                  </div>
-                  <div className="pro-item-edit">
-                    <span
-                      className={`icon-jian ${
-                        item.selectNum > 0 ? "edit-active" : ""
-                      }`}
-                      onClick={this.handleEdit.bind(this, index, -1)}
-                    ></span>
-                    <span className="pro-num">{item.selectNum}</span>
-                    <span
-                      className={`icon-jia`}
-                      onClick={this.handleEdit.bind(this, index, 1)}
-                    ></span>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+          {this.props.proData.isFetching ? (
+           <div className="loading-tip"> 正在加载中...</div>
+          ) : (
+            <ul className="pro-list-ul">
+              {this.props.proData.dataList.map((item, index) => {
+                return (
+                  <li key={index} className="pro-item">
+                    <div
+                      className="pro-item-select"
+                      onClick={() => {
+                        this.props.selectPro(index);
+                      }}
+                    >
+                      <span
+                        className={`icon-xuanze1 pro-select-status ${
+                          item.selectStatus ? "pro-selected" : ""
+                        }`}
+                      ></span>
+                      <span className="pro-name">{item.product_name}</span>
+                    </div>
+                    <div className="pro-item-edit">
+                      <span
+                        className={`icon-jian ${
+                          item.selectNum > 0 ? "edit-active" : ""
+                        }`}
+                        onClick={this.handleEdit.bind(this, index, -1)}
+                      ></span>
+                      <span className="pro-num">{item.selectNum}</span>
+                      <span
+                        className={`icon-jia`}
+                        onClick={this.handleEdit.bind(this, index, 1)}
+                      ></span>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </section>
       </main>
     );

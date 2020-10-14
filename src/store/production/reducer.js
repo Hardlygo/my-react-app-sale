@@ -15,19 +15,26 @@ let defaultState = {
    * }]
    */
   dataList: [],
+  isFetching: false,
 };
 
 export const proData = (state = defaultState, action) => {
   let immuteDataList;
   let immuteItem;
   const type = action.type;
+
   switch (type) {
+    case pro.REQUESTPRODUCTION:
+      return { ...state, ...{ isFetching: true } };
     case pro.GETPRODUCTION:
       //不修改原数据
       immuteDataList = immutable.fromJS(action.dataList);
       // redux必须返回一个新的state
-
-      return { ...state, ...{ dataList: immuteDataList.toJS() } };
+      return {
+        ...state,
+        ...{ dataList: immuteDataList.toJS() },
+        ...{ isFetching: false },
+      };
     case pro.TOGGLESELECT:
       immuteDataList = immutable.fromJS(state.dataList);
       immuteItem = immutable.Map(state.dataList[action.index]);

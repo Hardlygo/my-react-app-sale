@@ -5,6 +5,10 @@
 import * as pro from "./action-type";
 import API from "../../api/api";
 
+const requestData = () => ({
+  type: pro.REQUESTPRODUCTION,
+});
+
 //请求商品数据，并初始化
 const receiveData = (list) => ({
   type: pro.GETPRODUCTION,
@@ -14,6 +18,7 @@ const receiveData = (list) => ({
 export const getProData = () => {
   return async (dispatch) => {
     try {
+      dispatch(requestData());
       let result = await API.getProduction();
 
       result = result.map((item) => ({

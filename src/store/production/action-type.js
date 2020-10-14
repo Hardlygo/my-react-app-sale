@@ -1,3 +1,5 @@
+//开始请求商品
+export const REQUESTPRODUCTION = "REQUESTPRODUCTION";
 //获取商品
 export const GETPRODUCTION = "GETPRODUCTION";
 //选中商品
